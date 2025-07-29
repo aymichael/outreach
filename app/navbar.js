@@ -4,10 +4,10 @@ import { useState, useRef, useEffect } from 'react';
 import { year } from "./data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import "@/app/navbar.css";
+import "@/app/navBar.css";
 
-export default function Navbar() {
-  const years = Array.from({ length: year - 2000 + 1 }, (_, i) => 2000 + i).reverse();
+export default function NavBar() {
+  const years = Array.from({ length: year - 2024 + 1 }, (_, i) => 2024 + i).reverse();
   const currentYear = usePathname().split('/')[1];
   const containerRef = useRef(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
@@ -62,11 +62,10 @@ export default function Navbar() {
           </svg>
         </button>
       )}
-
       {/* Year Links Container */}
       <div 
         ref={containerRef}
-        className="flex overflow-x-auto scrollbar-hide py-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full shadow-lg mx-auto "
+        className="flex overflow-x-auto scrollbar-hide py-1 bg-gradient-to-r from-blue-400 to-blue-600 rounded-full shadow-lg mx-auto w-full"
       >
           {years.map((year) => (
             <Link
@@ -82,7 +81,6 @@ export default function Navbar() {
             </Link>
           ))}
       </div>
-
       {/* Right Arrow */}
       {showRightArrow && (
         <button 
