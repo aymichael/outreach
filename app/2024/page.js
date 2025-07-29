@@ -87,16 +87,10 @@ export default function EventsPage () {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-6xl">
-      <header className="mb-12 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-          Mathematics Outreach Events
+    <div>
+        <h1 className="text-3xl md:text-4xl font-bold text-center mb-8">
+          2024 Events
         </h1>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Explore our upcoming workshops, lectures, and special programs for talented students
-        </p>
-      </header>
-
       <div className="space-y-8">
         {events.map(event => (
           <EventBox key={event.id} event={event} />
