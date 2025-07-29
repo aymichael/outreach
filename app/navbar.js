@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { year } from "./data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import "@/app/navBar.css";
+import "@/app/navbar.css";
 
 export default function NavBar() {
   const years = Array.from({ length: year - 2024 + 1 }, (_, i) => 2024 + i).reverse();
