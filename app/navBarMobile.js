@@ -3,7 +3,6 @@
 import { year } from "./data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import "@/app/navBar.css";
 import { useState } from 'react';
 
 export default function NavBarMobile() {
