@@ -7,7 +7,7 @@ import "@/app/navBar.css";
 import { useState } from 'react';
 
 export default function NavBarMobile() {
-    const years = Array.from({ length: year - 2000 + 1 }, (_, i) => 2024 + i).reverse();
+    const years = Array.from({ length: year - 2024 + 1 }, (_, i) => 2024 + i).reverse();
     const currentYear = usePathname().split('/')[1];
     const [isOpen, setIsOpen] = useState(false);
 

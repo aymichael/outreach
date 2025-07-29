@@ -2,7 +2,7 @@ import "./globals.css";
 import Image from "next/image";
 import { Nunito_Sans, Raleway } from "next/font/google";
 import Link from "next/link";
-import NavBar from "./navbar";
+import NavBar from "./navBar";
 import NavBarMobile from "./navBarMobile";
 
 const nunito = Nunito_Sans({ subsets: ["latin"], weight: ["400"] });
