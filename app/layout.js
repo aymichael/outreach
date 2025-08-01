@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
             <NavBarMobile />
           </div>
         </header>
-        <main className="sm:p-10 p-6 w-full md:w-[48rem] lg:w-[64rem] bg-white/90 dark:bg-gray-700/90 shadow-white dark:shadow-gray-700 shadow-2xl h-full text-lg/8 md:text-xl/8">
+        <main className="sm:p-4 p-2 w-full md:w-[48rem] lg:w-[64rem] bg-white/90 dark:bg-gray-700/90 shadow-white dark:shadow-gray-700 shadow-2xl h-full text-lg/8 md:text-xl/8">
           {children}
         </main>
       </body>

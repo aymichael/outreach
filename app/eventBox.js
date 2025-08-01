@@ -1,6 +1,7 @@
 
 // components/EventBox.jsx
 import React from 'react';
+import Link from 'next/link';
 
 export default function EventBox({ event }) {
     // Helper to format date ranges
@@ -60,14 +61,14 @@ export default function EventBox({ event }) {
 
                     {event.target && (
                         <div>
-                            <h3 className="font-bold text-base md:text-lg">Target Audience</h3>
+                            <h3 className="font-bold text-base md:text-lg">Target</h3>
                             <p className="text-base md:text-lg">{event.target}</p>
                         </div>
                     )}
 
                     {event.medium && (
                         <div>
-                            <h3 className="font-bold text-base md:text-lg">Language</h3>
+                            <h3 className="font-bold text-base md:text-lg">Medium of Instruction</h3>
                             <p className="text-base md:text-lg">{event.medium}</p>
                         </div>
                     )}
@@ -82,6 +83,12 @@ export default function EventBox({ event }) {
 
                 {/* Right Column - Content */}
                 <div className="lg:col-span-2 space-y-4">
+                    {event.introduction && (
+                        <div>
+                            <h3 className="font-bold text-base md:text-lg">Introduction</h3>
+                            <p className="whitespace-pre-line text-base md:text-lg">{event.introduction}</p>
+                        </div>
+                    )}
                     {event.abstract && (
                         <div>
                             <h3 className="font-bold text-base md:text-lg">Abstract</h3>
@@ -92,22 +99,33 @@ export default function EventBox({ event }) {
             </div>
             {/* Extra Cases */}
             {event.extraTitle && (
-                <div className="mt-4 grid grid-cols-2 gap-4 w-full">
+                <div className="mt-4 grid md:grid-cols-2 gap-4 w-full">
                     {event.extraTitle.map((title, idx) => (
-                        <div key={idx} className="bg-blue-100 p-4 rounded-lg">
+                        <div key={idx} className="bg-blue-50 p-4 rounded-lg ring-2 ring-blue-100">
                             <h3 className="font-bold text-base md:text-lg text-blue-500">{title}</h3>
                             {event.extraContentTitle && (
                                 event.extraContentTitle.map((contentTitle, contentIdx) => (
-                                    <div key={contentIdx} className="flex flex-row flex-wrap items-end">
-                                    <h4 className="font-bold text-base md:text-lg mr-1">
-                                        {contentTitle}
-                                    </h4>
-                                    <p className="text-base md:text-lg whitespace-pre-line">{event.extraContent[idx][contentIdx]}</p>
+                                    <div key={contentIdx} className="flex flex-col">
+                                        <h4 className="font-bold text-base md:text-lg mr-1">
+                                            {contentTitle}
+                                        </h4>
+                                        <p className="text-base md:text-lg whitespace-pre-line">{event.extraContent[idx][contentIdx]}</p>
                                     </div>
                                 ))
                             )}
                         </div>
                     ))}
+                </div>
+            )}
+            {event.externalLink && (
+                <div className="mt-4">
+                    <p className="text-base md:text-lg">
+                        {event.externalLink[0]} <a href={event.externalLink[1]} className="text-blue-600 hover:underline">here</a> {event.externalLink[2]}</p>
+                </div>
+            )}
+            {event.remark && (
+                <div className="mt-4">
+                    <p className="text-sm md:text-base text-gray-600 whitespace-pre-line">{event.remark}</p>
                 </div>
             )}
         </div>
