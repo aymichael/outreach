@@ -41,6 +41,7 @@ export default function EventsPage () {
     },
     {
       title: "Mathematics Day Camp - Boolean Algebra and its Applications",
+      images: ["/2024/dayCamp_1.jpeg", "/2024/dayCamp_2.jpg"],
       speakers: ["Dr. Kai Leung Chan", "Dr. Lily Li Pan"],
       introduction: "The Day Camp is a whole-day mathematics-oriented STEM activity. During the day camp, the speakers introduce the basics of mathematics, such as sets, functions, and logic, and provide an introduction to Boolean Algebra. Participants will apply mathematics knowledge acquired to circuit design and minimization. They will also construct circuits to solve real-life problems in the hands-on activities provided.",
       extraTitle: ["1st round", "2nd round", "3rd round", "4th round"],

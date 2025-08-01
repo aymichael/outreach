@@ -1,7 +1,13 @@
+"use client";
 
-// components/EventBox.jsx
 import React from 'react';
-import Link from 'next/link';
+import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import Image from 'next/legacy/image';
+import './eventBox.css'; // Import the CSS file for styling
+
 
 export default function EventBox({ event }) {
     // Helper to format date ranges
@@ -12,7 +18,7 @@ export default function EventBox({ event }) {
     const haveMetadata = event.dates || event.time || event.speakers || event.target || event.medium || event.duration;
     console.log(String(haveMetadata));
     return (
-        <div className="rounded-xl shadow-md ring-2 ring-black/5 p-6 mb-6 bg-white transition-all hover:shadow-lg">
+        <div className="rounded-xl shadow-md ring-2 ring-black/5 p-6 mb-6 bg-gray-800 transition-all hover:shadow-lg dark:ring-gray-600/50 dark:shadow-gray-600">
             {/* Event Header */}
             <div className="border-b border-gray-300 pb-3 mb-3">
                 <div className="flex justify-between items-start gap-8">
@@ -26,6 +32,34 @@ export default function EventBox({ event }) {
                     </div>
                 </div>
             </div>
+            {/* Event Image */}
+            {event.images && (
+                <div className="mb-4">
+                    <Swiper
+                        modules={[Pagination]}
+                        spaceBetween={10}
+                        slidesPerView={1}
+                        pagination={{ clickable: true }}
+                        loop
+                    >
+                        {event.images.map((img, index) => (
+                            <SwiperSlide key={index}>
+                                <div className="w-full flex justify-center items-center">
+                                    <div key={index} className="w-4/5 aspect-[16/9] relative">
+                                        <Image
+                                            src={img}
+                                            alt={`Event Image ${index + 1}`}
+                                            layout="fill"
+                                            objectFit="cover"
+                                            className="rounded-lg"
+                                        />
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+            )}
             {/* Event Details */}
             <div className={`grid ${haveMetadata ? "lg:grid-cols-3 gap-6" : ""} `}>
                 {/* Left Column - Metadata */}
@@ -101,7 +135,7 @@ export default function EventBox({ event }) {
             {event.extraTitle && (
                 <div className="mt-4 grid md:grid-cols-2 gap-4 w-full">
                     {event.extraTitle.map((title, idx) => (
-                        <div key={idx} className="bg-blue-50 p-4 rounded-lg ring-2 ring-blue-100">
+                        <div key={idx} className="bg-blue-50 dark:bg-indigo-950 dark:ring-indigo-900 p-4 rounded-lg ring-2 ring-blue-100">
                             <h3 className="font-bold text-base md:text-lg text-blue-500">{title}</h3>
                             {event.extraContentTitle && (
                                 event.extraContentTitle.map((contentTitle, contentIdx) => (
@@ -120,12 +154,12 @@ export default function EventBox({ event }) {
             {event.externalLink && (
                 <div className="mt-4">
                     <p className="text-base md:text-lg">
-                        {event.externalLink[0]} <a href={event.externalLink[1]} className="text-blue-600 hover:underline">here</a> {event.externalLink[2]}</p>
+                        {event.externalLink[0]} <a href={event.externalLink[1]} className="text-blue-600 dark:text-blue-400 hover:underline">here</a> {event.externalLink[2]}</p>
                 </div>
             )}
             {event.remark && (
                 <div className="mt-4">
-                    <p className="text-sm md:text-base text-gray-600 whitespace-pre-line">{event.remark}</p>
+                    <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 whitespace-pre-line">{event.remark}</p>
                 </div>
             )}
         </div>
