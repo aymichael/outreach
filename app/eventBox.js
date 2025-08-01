@@ -18,7 +18,7 @@ export default function EventBox({ event }) {
     const haveMetadata = event.dates || event.time || event.speakers || event.target || event.medium || event.duration;
     console.log(String(haveMetadata));
     return (
-        <div className="rounded-xl shadow-md ring-2 ring-black/5 p-6 mb-6 bg-gray-800 transition-all hover:shadow-lg dark:ring-gray-600/50 dark:shadow-gray-600">
+        <div className="rounded-xl shadow-md ring-2 ring-black/5 p-6 mb-6 dark:bg-gray-800 transition-all hover:shadow-lg dark:ring-gray-600/50 dark:shadow-gray-600">
             {/* Event Header */}
             <div className="border-b border-gray-300 pb-3 mb-3">
                 <div className="flex justify-between items-start gap-8">
