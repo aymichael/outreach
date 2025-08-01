@@ -3,7 +3,8 @@ import Image from "next/image";
 import { Nunito_Sans, Raleway } from "next/font/google";
 import Link from "next/link";
 import NavBar from "./navbar";
-import NavBarMobile from "./navBarMobile";
+import NavBarMobile from "./navbarmobile";
+import { IoHome } from "react-icons/io5";
 
 const nunito = Nunito_Sans({ subsets: ["latin"], weight: ["400"] });
 const raleway = Raleway({ subsets: ["latin"], weight: ["700"] });
@@ -33,11 +34,14 @@ export default function RootLayout({ children }) {
           <div className="hidden md:block">
             <NavBar />
           </div>
-           <div className="flex justify-center items-center md:hidden ">
+          <div className="flex justify-center items-center md:hidden gap-2">
+            <Link href="/" className="flex items-center">
+              <IoHome size={30} className="text-gray-500 dark:text-gray-400"/>
+            </Link>
             <NavBarMobile />
           </div>
         </header>
-        <main className="sm:p-4 p-2 w-full md:w-[48rem] lg:w-[64rem] bg-white/90 dark:bg-gray-700/90 shadow-white dark:shadow-gray-700 shadow-2xl h-full text-lg/8 md:text-xl/8">
+        <main className="sm:p-4 p-2 w-full md:w-[48rem] lg:w-[64rem] bg-white/90 dark:bg-gray-700 h-full text-lg/8 md:text-xl/8">
           {children}
         </main>
       </body>

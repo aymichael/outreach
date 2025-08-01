@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function PartnershipPage() {
   return (
-    <div>
+    <div className="m-4 h-full">
       <Image
         src="/introduction.jpg"
         alt="introduction photo"
