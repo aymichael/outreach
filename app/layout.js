@@ -16,8 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} min-h-screen w-full dark:bg-gray-700 flex items-center leading-8 flex-col`}>
-        <header className="md:w-[48rem] lg:w-[64rem] w-full flex flex-row md:flex-col justify-between md:justify-center shadow-md px-2 md:px-4 md:pb-4 md:ring-2 ring-black/5 md:rounded-b-2xl z-10 md:mx-0">
+      <body>
+        <div className={`${nunito.className} min-h-screen w-full dark:bg-gray-700 flex items-center leading-8 flex-col`}>
+          
+        <header className="md:w-[48rem] lg:w-[64rem] w-full flex flex-row md:flex-col justify-between md:justify-center shadow-md px-2 md:px-4 md:pb-4 md:ring-2 ring-black/5 md:rounded-b-2xl z-10 md:mx-0 dark:bg-gray-800">
           <div className="flex justify-center md:justify-between items-center py-4 gap-16">
             <Link href="/" className="items-center hidden md:flex">
               <Image
@@ -44,6 +46,8 @@ export default function RootLayout({ children }) {
         <main className="sm:p-4 p-2 w-full md:w-[48rem] lg:w-[64rem] bg-white/90 dark:bg-gray-700 h-full text-lg/8 md:text-xl/8">
           {children}
         </main>
+        
+        </div>
       </body>
     </html>
   );
