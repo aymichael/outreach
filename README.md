@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Guide for OUTREACH website
 
-## Getting Started
+## Before Starting
 
-First, run the development server:
+If you wish to preview the website when editing, you should install [Node.js](https://nodejs.org/) and run the following commands in the terminal:
+
+```bash
+npm install
+```
+
+Then, each time you want to preview the website, run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Remarks: the terminal should be in the root directory of the project, where the `package.json` file is located.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Updating Yearly Information
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+First, you need to change the year in the `app/data.js` file. This will affect the navigation bar show on the top, it will automatically display years from 2024 until `year`.
 
-## Learn More
+The pages is stored directly in the `app`, where you will find every year's information page. For example, 2024 information page is the folder `app/2024`. To add a new course page, you can just copy the folder of the previous year and rename it to the new year (e.g., `2026` for the 2026 information page), then update the `page.js` file inside.
 
-To learn more about Next.js, take a look at the following resources:
+Since there are no internationalization (i18n) for the courses page, the content is explicitly written in the `page.js` file and you can directly edit the file to update the page.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Inside the `page.js` file, you should see a really long array that contains all the event:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```javascript
+const events = [
+  {
+    title: "{Event Title}",
+    subtitle: "{Event Subtitle}",
+    introduction: "{Event Introduction}",
+    date: "{Event Date}",
+    time: "{Event Time}",
+    speaker: "{Event Speaker}",
+    abstract: "{Event Abstract}",
+    target: "{Event Target Audience}",
+    medium: "{Event Medium}",
+    images: ["{Image directory 1}", "{Image directory 2}"],
+    extraTitle: ["{Extra Title_1}", "{Extra Title_2}"],
+    extraContentTitle: ["{Extra Content Title_1}", "{Extra Content Title_2}"],
+    extraContent: [["{Extra Content_11}", "{Extra Content_12}"], ["{Extra Content_21}", "{Extra Content_22}"]],
+    externaLink: ["{sentence_before_link}", "{External_Link}", "{sentence_after_link}"],
+    remarks: "{Event Remarks}",
+  },
+    // more events...
+];
+```
 
-## Deploy on Vercel
+Points to note:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Almost all fields are optional, except `title`, you can just not include the field if you do not need it.
+2. `introduction`, `abstract`, `extraContent`, and `remarks` accept break lines, so you can use `\n` to create a new line.
+3. `images` is an array of image directories, which should be placed in the `public` folder. For example, if you have an image `public/images/event1.png`, you should put `"/images/event1.png"` in the `images` array.
+4. `extraTitle`, `extraContentTitle`, and `extraContent` are used to create extra content sections, where
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    - `extraTitle` is an array of titles for each boxes,
+    - `extraContentTitle` is an array of titles for each content inside the boxes, and
+    - `extraContent` is a 2D array of content for each content inside the boxes, hence, order matters.
+
+5. `externalLink` is an array of string for displaying external links. It is assumed that that to display as following format:
+
+    ```javascript
+    {sentence_before_link} here {sentence_after_link}
+    ```
+
+    For example, if you want to display "For more information, please visit [here](https://example.com).", you can set `externalLink` to:
+
+    ```javascript
+    externalLink: ["For more information, please visit", "https://example.com", "."]
+    ```
