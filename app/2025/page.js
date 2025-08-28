@@ -8,23 +8,23 @@ export default function EventsPage () {
   const events = [
     {
       title: "Workshop on Set Theory",
-      //subtitle: "To be confirmed",
-      // introduction: "The workshop targets talented students with a deep interest in mathematics. It will provide participants with an opportunity for further study of set theory, which develops their ability in abstract and logical thinking. Participating students are required to complete coursework to understand their learning status.",
+      subtitle: "Set Theory and Computability",
       dates: ["6 Sep 2025", "13 Sep 2025"],
       time: "09:30 - 12:30",
       speakers: ["Prof. Michael McBreen"],
-      // abstract: "This workshop explores the world of groups and symmetries. We will start with some basic questions: what are the symmetries of a human face? A tea cup? A sphere? We will see how symmetry can be used to solve seemingly complex problems in beautifully simple ways, and get to know some of the weirder groups of symmetries in two and three dimensions. We will examine attempts to classify symmetry groups. We will try and understand both the successes and the failures of this approach, and finally we will glimpse some of the enduring mysteries of the subject.",
       target: "Senior secondary students with strong foundation and keen interest in advanced mathematical theories",
-      medium: "English"
+      medium: "English",
+      introduction: "The workshop targets talented students with a deep interest in mathematics. It will provide participants with an opportunity for further study of set theory, which develops their ability in abstract and logical thinking. Participating students are required to complete coursework to understand their learning status.",
+      abstract: "We will explore basic questions of knowability, provability and computability in mathematics. How do we characterize the complexity of a problem? What does it mean to say something is provable or unprovable? Along the way, we will get familiar with some fundamental tools of set theory."
     },
     {
       title: "Workshop on Algebra",
-      //subtitle: "To be confirmed",
-      // introduction: "The workshop targets talented students with a deep interest in mathematics. It will provide participants with an opportunity for further study of set theory, which develops their ability in abstract and logical thinking. Participating students are required to complete coursework to understand their learning status.",
+      subtitle: "Introduction to Groups and Symmetry",
+      introduction: "The workshop targets talented students with a deep interest in mathematics. It will provide participants with an opportunity for further study of set theory, which develops their ability in abstract and logical thinking. Participating students are required to complete coursework to understand their learning status.",
       dates: ["6 Sep 2025", "13 Sep 2025"],
       time: "09:30 - 12:30",
       speakers: ["Prof. Omar Kidwai"],
-      // abstract: "This workshop explores the world of groups and symmetries. We will start with some basic questions: what are the symmetries of a human face? A tea cup? A sphere? We will see how symmetry can be used to solve seemingly complex problems in beautifully simple ways, and get to know some of the weirder groups of symmetries in two and three dimensions. We will examine attempts to classify symmetry groups. We will try and understand both the successes and the failures of this approach, and finally we will glimpse some of the enduring mysteries of the subject.",
+      abstract: "In the first week, we will meditate on the notion of symmetry by looking at rotations of everyday shapes, like a tetrahedron. How symmetric is a given object? How can we describe the \"amount of symmetry\"? Is a number enough of an answer? In the second week, we will discuss how to formalize our intuition into a mathematical definition, and ease our way into a little bit of group theory.",
       target: "Senior secondary students with strong foundation and keen interest in advanced mathematical theories",
       medium: "English"
     },
@@ -70,6 +70,14 @@ export default function EventsPage () {
         ["Dr. Ming Ho Ng", "This course will introduce basic mathematical topics, such as the concept of sets, logic, proofs and their applications in various areas including graph theory and game theory."]
       ],
       externalLink: ["Click", "https://epymt.math.cuhk.edu.hk/", "for more information about EPYMT."],
+    },
+    {
+      title: "Gifted Mathematics Program for Secondary School Students (2025-26)",
+      speakers: ["Prof. Yiu Chung Benny Hon", "Dr. Wai Leung Hugo Mak"],
+      dates: ["Nov 2025 - May 2026 (divided into 3 phases)"],
+      introduction: "The Program aims at providing cohesive mathematical training for outstanding secondary school students, delivering contents that may not be covered in the Hong Kong Diploma of Secondary Education (HKDSE) curriculum, and enhancing students' interests and abilities in various branches of Mathematics, including but not limited to Fundamental Algebra, Logic, Coordinate Geometry and Elementary Analysis. Throughout different phases of this Program, students will be equipped with necessary mathematical tools for pursuing in-depth mathematical investigation or even mini-research.",
+      externalLink: ["Click", "https://epymt.math.cuhk.edu.hk/", "for more information about EPYMT."],
+    externalLink: ["Click", "/CUHK-TUYF_Gifted_Math_Program_(2025-26)_Leaflet.pdf", " for more details."],
     },
     {
       title: "Elite Student Mentorship Programme",
