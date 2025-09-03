@@ -22,7 +22,7 @@ export default function EventsPage () {
       subtitle: "Introduction to Groups and Symmetry",
       introduction: "The workshop targets talented students with a deep interest in mathematics. It will provide participants with an opportunity for further study of set theory, which develops their ability in abstract and logical thinking. Participating students are required to complete coursework to understand their learning status.",
       dates: ["6 Sep 2025", "13 Sep 2025"],
-      time: "09:30 - 12:30",
+      time: "14:00 - 17:00",
       speakers: ["Prof. Omar Kidwai"],
       abstract: "In the first week, we will meditate on the notion of symmetry by looking at rotations of everyday shapes, like a tetrahedron. How symmetric is a given object? How can we describe the \"amount of symmetry\"? Is a number enough of an answer? In the second week, we will discuss how to formalize our intuition into a mathematical definition, and ease our way into a little bit of group theory.",
       target: "Senior secondary students with strong foundation and keen interest in advanced mathematical theories",
