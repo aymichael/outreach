@@ -73,7 +73,7 @@ export default function EventsPage () {
     },
     {
       title: "Gifted Mathematics Program for Secondary School Students (2025-26)",
-      speakers: ["Prof. Yiu Chung Benny Hon", "Dr. Wai Leung Hugo Mak"],
+      speakers: ["Prof. Yiu Chung Benny Hon", "Dr. Wai Leung Hugo Mak", "Dr. Wai Chee Shiu"],
       dates: ["Nov 2025 - May 2026 (divided into 3 phases)"],
       introduction: "The Program aims at providing cohesive mathematical training for outstanding secondary school students, delivering contents that may not be covered in the Hong Kong Diploma of Secondary Education (HKDSE) curriculum, and enhancing students' interests and abilities in various branches of Mathematics, including but not limited to Fundamental Algebra, Logic, Coordinate Geometry and Elementary Analysis. Throughout different phases of this Program, students will be equipped with necessary mathematical tools for pursuing in-depth mathematical investigation or even mini-research.",
       externalLink: ["Click", "https://epymt.math.cuhk.edu.hk/", "for more information about EPYMT."],
