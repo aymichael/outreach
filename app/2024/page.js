@@ -46,7 +46,7 @@ export default function EventsPage () {
       introduction: "The Day Camp is a whole-day mathematics-oriented STEM activity. During the day camp, the speakers introduce the basics of mathematics, such as sets, functions, and logic, and provide an introduction to Boolean Algebra. Participants will apply mathematics knowledge acquired to circuit design and minimization. They will also construct circuits to solve real-life problems in the hands-on activities provided.",
       extraTitle: ["1st round", "2nd round", "3rd round", "4th round"],
       extraContentTitle: ["Date: ", "Participating Schools: "],
-      extraContent: [["17 Feb 2024", "Hong Kong True Light College\nTrue Light Middle School of Hong Kong\nKowloon True Light Middle School\nTrue Light Girls' College"],["11 May 2024", "Chan Sui Ki (La Salle) College\nHenrietta Secondary School\nSt. Stephen's Church College\nTWGHs. Kap Yan Directors College"],["13 July 2024", "Baptist Lui Ming Choi Secondary School\nCheung Chuk Shan College\nKiangsu-Chekiang College (Shatin)\nLKWFSL Lau Wong Fat Secondary School"],["20 July 2024", "S.K.H. Lam Woo Memorial Secondary School\nShatin Pui Ying College\nWah Yan College (Kowloon)\nYuen Long Merchants Association Secondary School"]],
+      extraContent: [["17 Feb 2024", "Hong Kong True Light College\nKowloon True Light Middle School\nTrue Light Girls' College\nTrue Light Middle School of Hong Kong"],["11 May 2024", "Chan Sui Ki (La Salle) College\nHenrietta Secondary School\nSt. Stephen's Church College\nTWGHs. Kap Yan Directors College"],["13 Jul 2024", "Baptist Lui Ming Choi Secondary School\nCheung Chuk Shan College\nKiangsu-Chekiang College (Shatin)\nLKWFSL Lau Wong Fat Secondary School"],["20 Jul 2024", "S.K.H. Lam Woo Memorial Secondary School\nShatin Pui Ying College\nWah Yan College (Kowloon)\nYuen Long Merchants Association Secondary School"]],
       externalLink: ["Click", "/dayCampLeaflet.pdf", " for more details."],
       remark: "Schools interested in this activity are welcome to contact us by email via outreach@math.cuhk.edu.hk for more information."
     },
@@ -83,9 +83,9 @@ export default function EventsPage () {
 
   return (
     <div>
-        <h1 className="text-3xl md:text-4xl font-bold text-center my-8">
-          2024 Events
-        </h1>
+      <h1 className="text-3xl md:text-4xl font-bold text-center my-8 text-[#1e3a8a] dark:text-blue-300">
+        CUHK-TUYF Partnership Project 2024-25
+      </h1>
       <div className="space-y-8">
         {events.map((event, index) => (
           <EventBox key={index} event={event} />

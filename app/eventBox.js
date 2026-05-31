@@ -129,6 +129,12 @@ export default function EventBox({ event }) {
                             <p className="whitespace-pre-line text-base md:text-lg">{event.abstract}</p>
                         </div>
                     )}
+                    {event.summary && (
+                        <div>
+                            <h3 className="font-bold text-base md:text-lg">Summary</h3>
+                            <p className="whitespace-pre-line text-base md:text-lg">{event.summary}</p>
+                        </div>
+                    )}                    
                 </div>
             </div>
             {/* Extra Cases */}
