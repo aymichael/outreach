@@ -83,9 +83,9 @@ export default function EventsPage () {
 
   return (
     <div>
-        <h1 className="text-3xl md:text-4xl font-bold text-center my-8">
-          2024 Events
-        </h1>
+      <h1 className="text-3xl md:text-4xl font-bold text-center my-8 text-[#1e3a8a] dark:text-blue-300">
+        CUHK-TUYF Partnership Project 2024-25
+      </h1>
       <div className="space-y-8">
         {events.map((event, index) => (
           <EventBox key={index} event={event} />
