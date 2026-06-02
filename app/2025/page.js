@@ -78,6 +78,7 @@ export default function EventsPage () {
     },
     {
       title: "Lecture Series on Naive Set Theory",
+      images: ["/2025/naive_set_theory1.jpg", "/2025/naive_set_theory2.jpg"],      
       introduction: "The activity gives senior secondary students an introduction to mathematical modelling, which aims to develop students' mathematical skills to solve real-life problems systematically. This event welcomes students interested in applied mathematics.",
       dates: ["14, 21, 28 Mar 2026", "11, 18 Apr 2026"],
       time: "10:00 - 13:00",
